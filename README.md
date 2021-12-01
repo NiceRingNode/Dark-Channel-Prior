@@ -54,7 +54,6 @@ Add another minimization operation:
 $$
 \underset {c}{min} \underset {y\in \Omega(x)}{min}(\frac {I^c(x)}{A^c})=\widetilde{t}(x) \underset {c}{min} \underset {y\in \Omega(x)}{min}(\frac {J^c(x)}{A^c})+(1-\widetilde{t}(x)) \tag{5}
 $$
-因为暗通道`J`按照统计规律是接近0的，则
 
 According to statistics,  the dark channel `J` is close to 0 , then:
 $$
@@ -68,7 +67,6 @@ Substituting `eq.(7)` into `eq.(5)`, `t` can be calculated approximately:
 $$
 \widetilde{t}(x)=1-\underset {c}{min}(\underset {y \in \Omega(x)}{min}(J^c(y)) \tag{8}
 $$
-考虑到保留一部分雾气，所以设置了个参数w
 
 In consideration of the existence of part of haze, a parameter `w` is set to keep the haze:
 $$
