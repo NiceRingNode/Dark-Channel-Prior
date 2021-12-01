@@ -1,0 +1,43 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>images/add_file.png</file>
+        <file>images/add_file_hover.png</file>
+        <file>images/centernet.png</file>
+        <file>images/pushbutton.png</file>
+        <file>images/pushbutton_hover.png</file>
+        <file>images/pushbutton_pressed.png</file>
+        <file>images/wait.gif</file>
+        <file>images/white.jpg</file>
+    </qresource>
+    <qresource prefix="/icons">
+        <file>icons/add_file.ico</file>
+        <file>icons/add_file_hover.ico</file>
+        <file>icons/black_arrow.ico</file>
+        <file>icons/clear.ico</file>
+        <file>icons/close.ico</file>
+        <file>icons/cut.ico</file>
+        <file>icons/horn.ico</file>
+        <file>icons/open.ico</file>
+        <file>icons/output.ico</file>
+        <file>icons/pause.ico</file>
+        <file>icons/play.ico</file>
+        <file>icons/savev.ico</file>
+        <file>icons/white_arrow.ico</file>
+        <file>icons/whole.ico</file>
+        <file>icons/erode.ico</file>
+        <file>icons/fog.ico</file>
+        <file>icons/lightning.ico</file>
+        <file>icons/run.ico</file>
+        <file>icons/origin.ico</file>
+        <file>icons/filter.ico</file>
+        <file>icons/save.ico</file>
+        <file>icons/save2.ico</file>
+        <file>icons/save3.ico</file>
+        <file>icons/screen.ico</file>
+        <file>icons/icon.ico</file>
+    </qresource>
+    <qresource prefix="/stylesheets">
+        <file>stylesheets/style_dark.qss</file>
+        <file>stylesheets/style_light.qss</file>
+    </qresource>
+</RCC>
