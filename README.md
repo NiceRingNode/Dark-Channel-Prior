@@ -10,7 +10,7 @@ Python 3.7.7+
 
 numpy 1.20.3+
 
-PyQt5.15+
+PyQt5 5.15.0+
 
 ```shell
 pip install -r requirements.txt
