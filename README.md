@@ -34,49 +34,36 @@ This implementation contains:
 
 # Theory:foggy:
 
-$skk$
 The relationship between the hazed map`I(x)`and original image`J(x)`:
-$$
-I(x)=J(x)t(x)+A(1-t(x)) \tag{1} \label{eq1}
-$$
+$$ I(x)=J(x)t(x)+A(1-t(x)) $$
+
 Formulation to calculate the dark channel：
-$$
-J^{dark}(x)=\underset {c\in \{r,g,b\}}{min}(\underset {y\in \Omega(x)}{min}{J^c(y)}) \tag{2} \label{eq2}
-$$
+$$ J^{dark}(x)=\underset {c\in \{r,g,b\}}{min}(\underset {y\in \Omega(x)}{min}{J^c(y)}) $$
+
 Minimize both sides of `eq.(1)`:
-$$
-\underset {y\in \Omega(x)}{min}I^c(x)=\widetilde{t}(x) \underset {y\in \Omega(x)}{min}J^c(x)+(1-\widetilde{t}(x))A^c \tag{3}
-$$
+$$ \underset {y\in \Omega(x)}{min}I^c(x)=\widetilde{t}(x) \underset {y\in \Omega(x)}{min}J^c(x)+(1-\widetilde{t}(x))A^c $$
+
 Divide both sides by A:
-$$
-\underset {y\in \Omega(x)}{min}(\frac {I^c(x)}{A^c})=\widetilde{t}(x) \underset {y\in \Omega(x)}{min}(\frac {J^c(x)}{A^c})+(1-\widetilde{t}(x)) \tag{4} \label{eq4}
-$$
+$$ \underset {y\in \Omega(x)}{min}(\frac {I^c(x)}{A^c})=\widetilde{t}(x) \underset {y\in \Omega(x)}{min}(\frac {J^c(x)}{A^c})+(1-\widetilde{t}(x)) $$
+
 Add another minimization operation:
-$$
-\underset {c}{min} \underset {y\in \Omega(x)}{min}(\frac {I^c(x)}{A^c})=\widetilde{t}(x) \underset {c}{min} \underset {y\in \Omega(x)}{min}(\frac {J^c(x)}{A^c})+(1-\widetilde{t}(x)) \tag{5}
-$$
+$$ \underset {c}{min} \underset {y\in \Omega(x)}{min}(\frac {I^c(x)}{A^c})=\widetilde{t}(x) \underset {c}{min} \underset {y\in \Omega(x)}{min}(\frac {J^c(x)}{A^c})+(1-\widetilde{t}(x)) $$
 
 According to statistics,  the dark channel `J` is close to 0 , then:
-$$
-J^{dark}(x)=\underset {c}{min}(\underset {y \in \Omega(x)}{min}(J^c(y)))=0 \tag{6}
-$$
+$$ J^{dark}(x)=\underset {c}{min}(\underset {y \in \Omega(x)}{min}(J^c(y)))=0 $$
+
 It leads to:
-$$
-\underset {c}{min} \underset {y\in \Omega(x)}{min}(\frac {J^c(x)}{A^c})=0 \tag{7}
-$$
+$$ \underset {c}{min} \underset {y\in \Omega(x)}{min}(\frac {J^c(x)}{A^c})=0 $$
+
 Substituting `eq.(7)` into `eq.(5)`, `t` can be calculated approximately:
-$$
-\widetilde{t}(x)=1-\underset {c}{min}(\underset {y \in \Omega(x)}{min}(J^c(y)) \tag{8}
-$$
+$$ \widetilde{t}(x)=1-\underset {c}{min}(\underset {y \in \Omega(x)}{min}(J^c(y)) $$
 
 In consideration of the existence of part of haze, a parameter `w` is set to keep the haze:
-$$
-\widetilde{t}(x)=1-\omega\underset {c}{min}(\underset {y \in \Omega(x)}{min}(J^c(y)) \tag{9}
-$$
+$$ \widetilde{t}(x)=1-\omega\underset {c}{min}(\underset {y \in \Omega(x)}{min}(J^c(y)) $$
+
 Finally, the formulation of calculate the original image is figured out:
-$$
-J(x)=\frac {I(x)-A}{max(t(x),t_0)}+A \tag{10}
-$$
+$$ J(x)=\frac {I(x)-A}{max(t(x),t_0)}+A $$
+
 `A` is the global atmospheric light composition, we take the position of the brightest %0.1 point in the dark channel image, then find the maximum value of the RGB value of the point at the corresponding position on the original image, and take the average of this value of all points.
 
 # Results:framed_picture:
