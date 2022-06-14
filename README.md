@@ -34,6 +34,7 @@ This implementation contains:
 
 # Theory:foggy:
 
+$skk$
 The relationship between the hazed map`I(x)`and original image`J(x)`:
 $$
 I(x)=J(x)t(x)+A(1-t(x)) \tag{1} \label{eq1}
